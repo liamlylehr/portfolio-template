@@ -1,0 +1,71 @@
+/* global variables */
+:root {
+    --header-size: 40px;
+    --menu-color: black;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    background-color:var(--menu-color);
+    color: white;
+    height: var(--header-size);
+    width: 100%;
+    /* z-index: 10; */
+}
+
+.menuButton {
+    position: fixed;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.menuNav {
+    list-style: none;
+    background-color: var(--menu-color);
+    color: white;
+    position: fixed;
+    top: var(--header-size);
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    /* max-width: 290px; */
+    /* z-index: 9; */
+  }
+  
+  .menuNav.showMenu {
+    width: 100%;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+
+.link {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  height: 60px;
+}
+
+  /* Change color on hover */
+.link:hover {
+  background-color: #ddd;
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+}
